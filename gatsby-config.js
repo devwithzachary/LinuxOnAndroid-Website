@@ -1,7 +1,21 @@
-require("dotenv").config();
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 const queries = require("./src/utils/algolia");
 const config = require("./config");
 const plugins = [
+  {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: process.env.PUB_KEY
+      },
+    },
+    {
+        resolve: `gatsby-plugin-s3`,
+        options: {
+            bucketName: process.env.BUCKET,
+        },
+    },
   'gatsby-plugin-sitemap',
   'gatsby-plugin-sharp',
   {
@@ -41,7 +55,7 @@ const plugins = [
     resolve: `gatsby-plugin-gtag`,
     options: {
       // your google analytics tracking id
-      trackingId: config.gatsby.gaTrackingId,
+      trackingId: process.env.GA_KEY,
       // Puts tracking script in the head instead of the body
       head: true,
       // enable ip anonymization

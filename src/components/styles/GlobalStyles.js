@@ -76,7 +76,7 @@ export const baseStyles = css`
     border-radius: 1px;
     margin: 0 auto;
     margin-top: 4px;
-    background-color: #001934;
+    background-color: #eb5600;
   }
   .navBarToggle .iconBar:first-child {
     margin-top: 0px;
@@ -223,11 +223,10 @@ export const baseStyles = css`
   }
   .headerTitle {
     height: auto;
-    font-size: 16px;
+    font-size: 26px;
     line-height: 1.5;
     font-weight: 300;
     color: #fff !important;
-    margin-top: 16px;
     text-transform: uppercase;
   }
   .headerTitle a {
@@ -257,7 +256,7 @@ export const baseStyles = css`
     padding: 0 !important;
   }
   .navBarDefault {
-    background-color: #001934;
+    background-color: #eb5600;
     border-radius: 0;
     border-top: 0;
     margin-bottom: 0;
@@ -286,7 +285,8 @@ export const baseStyles = css`
   }
 
   .navBarBrand img {
-    width: 120px;
+    width: 70px;
+    height: 70px;
     margin-right: 6px;
     display: inline-block;
   }
@@ -374,7 +374,7 @@ export const baseStyles = css`
     font-family: 'Poppins';
     font-size: 18px;
     font-weight: 600;
-    color: #001934;
+    color: #eb5600#;
     display: flex;
     align-items: center;
   }
@@ -384,7 +384,7 @@ export const baseStyles = css`
   }
 
   .sidebarTitle a {
-    color: #001934;
+    color: #eb5600;
   }
 
   .greenCircle {
@@ -734,13 +734,13 @@ export const baseStyles = css`
 
   @media (max-width: 767px) {
     .formElement svg path {
-      fill: #001934;
+      fill: #eb5600;
     }
     .visibleMobileView {
       display: block !important;
     }
     .searchInput {
-      color: #001934;
+      color: #eb5600;
     }
     .socialWrapper {
       position: absolute;
