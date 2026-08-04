@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux on Android | Complete Linux Installer & PRoot Engine</title>
+  <meta name="description" content="Run full Ubuntu Linux environments natively on Android without root. Complete Linux Installer brings a 100% rootless PRoot engine, terminal emulator, XFCE4 desktop, and developer software stacks to your phone or tablet.">
+  <meta name="keywords" content="Linux on Android, Complete Linux Installer, PRoot Android, Ubuntu on Android, Rootless Linux, Android Linux terminal, XFCE4 VNC Android">
+  <link rel="canonical" href="https://linuxonandroid.com/">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#" class="brand">
+        <img src="assets/logo.png" alt="Linux on Android Logo" class="brand-logo">
+        <span>Linux on Android</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#stacks" class="nav-link">Software Stacks</a>
+        <a href="#history" class="nav-link">Project History</a>
+        <a href="#setup" class="nav-link">Quick Setup</a>
+        <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="nav-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub Repository
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            100% Rootless • PRoot Subsystem Engine
+          </div>
+          <h1 class="hero-title">
+            Run Full <span class="gradient-text">Linux Distributions</span> on Android
+          </h1>
+          <p class="hero-description">
+            Complete Linux Installer brings full Ubuntu environments, VT100 terminal emulation, XFCE4 graphical desktop, and one-click developer stacks directly to your Android device — without needing root permissions.
+          </p>
+          <div class="hero-ctas">
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+            <a href="#setup" class="btn-secondary">
+              Quick Setup Guide ↓
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-mockup-wrapper">
+          <div class="hero-mockup-glow"></div>
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <img src="assets/app_screenshot.png" alt="Linux on Android App Screenshot">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Ribbon -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Rootless PRoot Operation</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Years of Project Evolution</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Architectures (ARM64, x86_64, ARMv7)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">1-Click</div>
+          <div class="stat-label">Software Stacks & XFCE4 VNC</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Capabilities</div>
+        <h2 class="section-title">Everything You Need for Mobile Linux</h2>
+        <p class="section-subtitle">Turn any Android phone or tablet into a portable development workstation or lightweight server.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3 class="feature-title">100% Rootless Freedom</h3>
+          <p class="feature-text">Operates entirely in user-space via native PRoot ptrace system call interception. No root access, bootloader unlocking, or system modifications required.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Interactive Native Terminal</h3>
+          <p class="feature-text">Built-in VT100/XTerm terminal emulator with full ANSI color support, PTY window resize, scroll buffer, and custom quick-action keys (Ctrl, Alt, Esc, Tab, Arrows).</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🖥️</div>
+          <h3 class="feature-title">XFCE4 Desktop & VNC</h3>
+          <p class="feature-text">One-click installation of XFCE4 desktop paired with TigerVNC server for a complete graphical Linux experience accessible via local VNC viewers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Zero-Hang APT Engine</h3>
+          <p class="feature-text">Arch-aware mirror detection (<code class="prompt">ports.ubuntu.com</code> for ARM vs <code class="prompt">archive.ubuntu.com</code> for x86) with disabled HTTP pipelining for fast, reliable package updates.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌐</div>
+          <h3 class="feature-title">Multi-Arch Engine</h3>
+          <p class="feature-text">Automatic architecture detection and native execution support for 64-bit ARM (aarch64), 64-bit x86 (amd64), and 32-bit ARM (armhf) processors.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📁</div>
+          <h3 class="feature-title">Storage & Device Binding</h3>
+          <p class="feature-text">Automatic mounting of Android storage (<code class="prompt">/sdcard</code>) and system pseudofs (<code class="prompt">/proc</code>, <code class="prompt">/sys</code>, <code class="prompt">/dev</code>) alongside Link2Symlink SELinux compatibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Software Stacks Showcase -->
+  <section class="stacks-section" id="stacks">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">One-Click Software Stacks</div>
+        <h2 class="section-title">Pre-Configured Developer Workstations</h2>
+        <p class="section-subtitle">Install complete developer environments with a single tap in the Software Hub.</p>
+      </div>
+
+      <div class="tab-nav">
+        <button class="tab-btn active" data-stack="node">Node.js Stack</button>
+        <button class="tab-btn" data-stack="python">Python 3 Stack</button>
+        <button class="tab-btn" data-stack="android">Android Dev Tools</button>
+        <button class="tab-btn" data-stack="nginx">NGINX & SQLite</button>
+        <button class="tab-btn" data-stack="ssh">OpenSSH Server</button>
+      </div>
+
+      <div class="stack-content">
+        <!-- Node.js Panel -->
+        <div class="stack-panel active" id="stack-node">
+          <div class="stack-info">
+            <h3>Node.js Developer Stack</h3>
+            <p>Complete JavaScript & TypeScript backend environment featuring Node.js, npm, Yarn, GCC build-essential, Neovim, and Git.</p>
+            <div class="tag-list">
+              <span class="tag-item">nodejs</span>
+              <span class="tag-item">npm</span>
+              <span class="tag-item">yarnpkg</span>
+              <span class="tag-item">build-essential</span>
+              <span class="tag-item">git</span>
+              <span class="tag-item">neovim</span>
+            </div>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Installation Logic →</a>
+          </div>
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">bash — linuxonandroid</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">node -v</span></p>
+              <p class="output">v20.18.0</p>
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">npm --version</span></p>
+              <p class="output">10.8.2</p>
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">git status</span></p>
+              <p class="output">On branch main. Your branch is up to date with 'origin/main'.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Python Panel -->
+        <div class="stack-panel" id="stack-python">
+          <div class="stack-info">
+            <h3>Python 3 Developer Stack</h3>
+            <p>Modern Python development environment with Python 3, pip3, virtualenv, GCC C/C++ compiler tools, Git, and Neovim.</p>
+            <div class="tag-list">
+              <span class="tag-item">python3</span>
+              <span class="tag-item">python3-pip</span>
+              <span class="tag-item">python3-venv</span>
+              <span class="tag-item">build-essential</span>
+              <span class="tag-item">git</span>
+            </div>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Installation Logic →</a>
+          </div>
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">bash — linuxonandroid</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">python3 --version</span></p>
+              <p class="output">Python 3.14.0</p>
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">pip3 list</span></p>
+              <p class="output">Package Version --- pip 24.0, setuptools 69.5.1</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Android Dev Panel -->
+        <div class="stack-panel" id="stack-android">
+          <div class="stack-info">
+            <h3>Android Developer Tools</h3>
+            <p>Build and debug Android applications inside Linux on Android using OpenJDK 17, ADB, Fastboot, Gradle, and Git.</p>
+            <div class="tag-list">
+              <span class="tag-item">openjdk-17-jdk</span>
+              <span class="tag-item">android-sdk-platform-tools</span>
+              <span class="tag-item">gradle</span>
+            </div>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Installation Logic →</a>
+          </div>
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">bash — linuxonandroid</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">java -version</span></p>
+              <p class="output">openjdk version "17.0.12" 2024-07-16</p>
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">adb devices</span></p>
+              <p class="output">List of devices attached</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- NGINX Panel -->
+        <div class="stack-panel" id="stack-nginx">
+          <div class="stack-info">
+            <h3>NGINX Web Server & SQLite</h3>
+            <p>Turn your Android phone into a local HTTP web server and embedded database system powered by NGINX and SQLite3.</p>
+            <div class="tag-list">
+              <span class="tag-item">nginx</span>
+              <span class="tag-item">sqlite3</span>
+              <span class="tag-item">curl</span>
+            </div>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Installation Logic →</a>
+          </div>
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">bash — linuxonandroid</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">service nginx start</span></p>
+              <p class="output">* Starting NGINX web server nginx ... [ OK ]</p>
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">curl -I http://localhost</span></p>
+              <p class="output">HTTP/1.1 200 OK Server: nginx/1.24.0</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- OpenSSH Panel -->
+        <div class="stack-panel" id="stack-ssh">
+          <div class="stack-info">
+            <h3>OpenSSH Server Daemon</h3>
+            <p>Access your Android Linux environment remotely from your laptop or PC command line over local Wi-Fi or LAN.</p>
+            <div class="tag-list">
+              <span class="tag-item">openssh-server</span>
+              <span class="tag-item">port 2222</span>
+            </div>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Installation Logic →</a>
+          </div>
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">bash — linuxonandroid</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">/usr/sbin/sshd -p 2222</span></p>
+              <p class="output">Server listening on port 2222.</p>
+              <p><span class="prompt">user@desktop:~$</span> <span class="cmd">ssh ubuntu@192.168.1.50 -p 2222</span></p>
+              <p class="output">Welcome to Ubuntu 26.04 LTS (GNU/Linux aarch64)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- History & Heritage Section -->
+  <section class="history-section" id="history">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Heritage</div>
+        <h2 class="section-title">15 Years of Innovation (2011 – Present)</h2>
+        <p class="section-subtitle">From early XDA Developers root chroot scripts to a modern 100% rootless Jetpack Compose application.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- 2011 - 2012 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2011 – 2012</div>
+            <h3 class="timeline-title">Project Inception on XDA</h3>
+            <p class="timeline-desc">First created on XDA Developers as the "Ubuntu Installer" and "Complete Linux Installer" project, pioneering chroot-based Linux deployments on early Android devices.</p>
+            <div class="archive-links">
+              <a href="https://xdaforums.com/t/app-1-6-ubuntu-installer-please-close-thread-moved-to-new-thread.1390351/" target="_blank" rel="noopener" class="archive-link">
+                ↗ XDA Ubuntu Installer Thread (2011)
+              </a>
+              <a href="https://xdaforums.com/t/app-linux-on-android-project-complete-linux-installer.1585009/" target="_blank" rel="noopener" class="archive-link">
+                ↗ XDA Complete Linux Installer Thread
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2013 - 2017 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2013 – 2017</div>
+            <h3 class="timeline-title">LinuxOnAndroid.com & Wide Adoption</h3>
+            <p class="timeline-desc">Expanded distribution images (Ubuntu, Debian, Fedora, Arch), VNC graphical scripts, and custom rootfs image mounting tools hosted on linuxonandroid.com.</p>
+            <div class="archive-links">
+              <a href="https://web.archive.org/web/20170805185342/http://linuxonandroid.com/" target="_blank" rel="noopener" class="archive-link">
+                ↗ Historic Site Archive (Wayback Machine 2017)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modern Era -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026 Modern Architecture</div>
+            <h3 class="timeline-title">100% Rootless Jetpack Compose Rebirth</h3>
+            <p class="timeline-desc">Rebuilt from the ground up: complete rootless operation via PRoot ptrace, POSIX PTY native C++ bridge, Jetpack Compose Material3 UI, and arch-aware mirror automation.</p>
+            <div class="archive-links">
+              <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="archive-link">
+                ↗ Modern GitHub Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Setup Section -->
+  <section class="setup-section" id="setup">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Quick Walkthrough</div>
+        <h2 class="section-title">Get Started in 3 Simple Steps</h2>
+        <p class="section-subtitle">Setting up Linux on your Android phone takes less than 2 minutes.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-num">01</span>
+          <h3 class="step-title">Build or Download APK</h3>
+          <p class="step-text">Clone the GitHub repository and compile with <code class="prompt">./gradlew assembleDebug</code> or download the latest release APK.</p>
+          <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="archive-link">View Build Instructions →</a>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">02</span>
+          <h3 class="step-title">Run Setup Wizard</h3>
+          <p class="step-text">Launch the app, select your target architecture, and tap <strong>Download & Install RootFS</strong>. The app unpacks and configures Ubuntu automatically.</p>
+        </div>
+
+        <div class="step-card">
+          <span class="step-num">03</span>
+          <h3 class="step-title">Open Terminal or Desktop</h3>
+          <p class="step-text">Navigate to the Terminal tab for interactive shell access or open the Software Hub to launch XFCE4 Desktop and developer stacks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/logo.png" alt="Linux on Android Logo" style="width: 32px; height: 32px; border-radius: 8px;">
+            <span>Linux on Android</span>
+          </div>
+          <p class="footer-desc">Open-source rootless Linux environment & installer for Android devices powered by PRoot, Jetpack Compose, and native PTY bridges.</p>
+        </div>
+
+        <div>
+          <div class="footer-title">Project Links</div>
+          <ul class="footer-links">
+            <li><a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener">GitHub Repository</a></li>
+            <li><a href="https://github.com/devwithzachary/LinuxOnAndroid/blob/main/LICENSE" target="_blank" rel="noopener">GPL-2.0 License</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#stacks">Software Stacks</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Historical Archives</div>
+          <ul class="footer-links">
+            <li><a href="https://web.archive.org/web/20170805185342/http://linuxonandroid.com/" target="_blank" rel="noopener">Wayback Archive (2017)</a></li>
+            <li><a href="https://xdaforums.com/t/app-linux-on-android-project-complete-linux-installer.1585009/" target="_blank" rel="noopener">XDA Main Thread</a></li>
+            <li><a href="https://xdaforums.com/t/app-1-6-ubuntu-installer-please-close-thread-moved-to-new-thread.1390351/" target="_blank" rel="noopener">XDA Original Thread (2011)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2011 – 2026 Linux on Android Project. Released under GPL-2.0.</div>
+        <div>Hosted on GitHub Pages • linuxonandroid.com</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
