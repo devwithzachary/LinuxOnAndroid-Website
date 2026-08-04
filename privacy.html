@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Linux on Android</title>
+  <meta name="description" content="Privacy Policy for Complete Linux Installer (Linux on Android).">
+  <link rel="canonical" href="https://linuxonandroid.com/privacy.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .legal-content {
+      padding: 140px 0 80px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .legal-content h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+    .legal-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 32px 0 16px;
+      color: var(--accent-primary);
+    }
+    .legal-content p, .legal-content ul {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .legal-content ul {
+      padding-left: 24px;
+      list-style-type: disc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Linux on Android Logo" class="brand-logo">
+        <span>Linux on Android</span>
+      </a>
+      <a href="index.html" class="nav-btn">← Back to Home</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="legal-content">
+      <h1>Privacy Policy</h1>
+      <p><strong>Effective Date:</strong> August 4, 2026</p>
+
+      <p><strong>Complete Linux Installer (Linux on Android)</strong> is an open-source application dedicated to respecting user privacy. This Privacy Policy outlines our commitment to user confidentiality and data security.</p>
+
+      <h2>1. Zero Data Collection</h2>
+      <p>Complete Linux Installer does <strong>not</strong> collect, store, track, transmit, or monetize any personal data, device identifiers, IP addresses, usage analytics, or telemetry. All operation occurs 100% locally on your device inside your app private sandbox.</p>
+
+      <h2>2. Network Access & APT Packages</h2>
+      <p>The application requests network access (<code class="prompt">android.permission.INTERNET</code>) solely for downloading official Linux rootfs tarballs and APT package updates directly from official Ubuntu package mirrors (<code class="prompt">ports.ubuntu.com</code> / <code class="prompt">archive.ubuntu.com</code>). No data is sent to developer servers.</p>
+
+      <h2>3. Device Storage Access</h2>
+      <p>Storage permissions (<code class="prompt">READ_EXTERNAL_STORAGE</code> / <code class="prompt">WRITE_EXTERNAL_STORAGE</code>) are requested exclusively to bind your device's shared storage (<code class="prompt">/sdcard</code>) into the guest Linux filesystem when enabled by the user.</p>
+
+      <h2>4. Open Source Transparency</h2>
+      <p>Complete Linux Installer is licensed under the GNU General Public License v2.0 (GPL-2.0). The complete source code is publicly inspectable on <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener">GitHub</a>.</p>
+
+      <h2>5. Contact & Questions</h2>
+      <p>If you have any questions regarding this Privacy Policy, please visit our <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener">GitHub Repository</a> to open an issue.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <div>© 2011 – 2026 Linux on Android Project. Released under GPL-2.0.</div>
+        <div><a href="index.html">Home</a> • <a href="privacy.html">Privacy Policy</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
