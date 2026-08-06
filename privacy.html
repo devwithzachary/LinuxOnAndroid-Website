@@ -13,6 +13,10 @@
 
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Umami Analytics -->
+  <script defer src="https://stats.devwithzachary.com/stats" data-website-id="44465c58-4411-49d9-8eae-c585fdd5a2f9"></script>
+
   <style>
     .legal-content {
       padding: 140px 0 80px;
@@ -47,11 +51,11 @@
   <!-- Navigation Bar -->
   <header class="navbar">
     <div class="container">
-      <a href="index.html" class="brand">
+      <a href="index.html" class="brand" data-umami-event="click-privacy-brand">
         <img src="assets/logo.png" alt="Linux on Android Logo" class="brand-logo">
         <span>Linux on Android</span>
       </a>
-      <a href="index.html" class="nav-btn">← Back to Home</a>
+      <a href="index.html" class="nav-btn" data-umami-event="click-privacy-back-home">← Back to Home</a>
     </div>
   </header>
 
@@ -72,10 +76,10 @@
       <p>Storage permissions (<code class="prompt">READ_EXTERNAL_STORAGE</code> / <code class="prompt">WRITE_EXTERNAL_STORAGE</code>) are requested exclusively to bind your device's shared storage (<code class="prompt">/sdcard</code>) into the guest Linux filesystem when enabled by the user.</p>
 
       <h2>4. Open Source Transparency</h2>
-      <p>Complete Linux Installer is licensed under the GNU General Public License v2.0 (GPL-2.0). The complete source code is publicly inspectable on <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener">GitHub</a>.</p>
+      <p>Complete Linux Installer is licensed under the GNU General Public License v2.0 (GPL-2.0). The complete source code is publicly inspectable on <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" data-umami-event="click-privacy-github">GitHub</a>.</p>
 
       <h2>5. Contact & Questions</h2>
-      <p>If you have any questions regarding this Privacy Policy, please visit our <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener">GitHub Repository</a> to open an issue.</p>
+      <p>If you have any questions regarding this Privacy Policy, please visit our <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" data-umami-event="click-privacy-github-contact">GitHub Repository</a> to open an issue.</p>
     </div>
   </div>
 
@@ -83,7 +87,7 @@
     <div class="container">
       <div class="footer-bottom">
         <div>© 2011 – 2026 Linux on Android Project. Released under GPL-2.0.</div>
-        <div><a href="index.html">Home</a> • <a href="privacy.html">Privacy Policy</a></div>
+        <div><a href="index.html" data-umami-event="click-privacy-footer-home">Home</a> • <a href="privacy.html" data-umami-event="click-privacy-footer-self">Privacy Policy</a></div>
       </div>
     </div>
   </footer>

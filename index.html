@@ -13,34 +13,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
+  <!-- Icons & Styles -->
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Umami Analytics -->
+  <script defer src="https://stats.devwithzachary.com/stats" data-website-id="44465c58-4411-49d9-8eae-c585fdd5a2f9"></script>
 </head>
 <body>
 
   <!-- Navigation Bar -->
   <header class="navbar">
     <div class="container">
-      <a href="#" class="brand">
+      <a href="#" class="brand" data-umami-event="click-brand-logo">
         <img src="assets/logo.png" alt="Linux on Android Logo" class="brand-logo">
         <span>Linux on Android</span>
       </a>
 
-      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation" data-umami-event="toggle-mobile-menu">
         ☰
       </button>
 
       <nav class="nav-links" id="nav-links">
-        <a href="#features" class="nav-link">Features</a>
-        <a href="#stacks" class="nav-link">Software Stacks</a>
-        <a href="#history" class="nav-link">Project History</a>
-        <a href="#setup" class="nav-link">Quick Setup</a>
-        <a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" class="nav-btn nav-btn-play" style="background: #10b981; margin-right: 8px;">
+        <a href="#features" class="nav-link" data-umami-event="click-nav-features">Features</a>
+        <a href="#stacks" class="nav-link" data-umami-event="click-nav-stacks">Software Stacks</a>
+        <a href="#history" class="nav-link" data-umami-event="click-nav-history">Project History</a>
+        <a href="#setup" class="nav-link" data-umami-event="click-nav-setup">Quick Setup</a>
+        <a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" class="nav-btn nav-btn-play" style="background: #10b981; margin-right: 8px;" data-umami-event="click-playstore-nav">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186A2.373 2.373 0 013 20.5v-17c0-.678.274-1.303.609-1.686zM15.207 13.414l2.9-2.9-2.9-2.9-2.122 2.121 2.122 2.779zM18.814 11.207l2.9 2.9a2.37 2.37 0 010 3.355l-2.9 2.9-2.121-2.121 2.121-7.034z"/></svg>
           Get on Google Play
         </a>
-        <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="nav-btn">
+        <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="nav-btn" data-umami-event="click-github-nav">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           GitHub Repository
         </a>
@@ -64,17 +67,17 @@
             Complete Linux Installer brings full Ubuntu desktop environments (XFCE4 + VNC), VT100 pseudo-terminal emulation, and one-click developer stacks directly to your Android device — without needing root permissions.
           </p>
           <div class="hero-ctas">
-            <a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" class="btn-primary" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);">
+            <a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" class="btn-primary" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: #ffffff; box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);" data-umami-event="click-playstore-hero">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186A2.373 2.373 0 013 20.5v-17c0-.678.274-1.303.609-1.686zM15.207 13.414l2.9-2.9-2.9-2.9-2.122 2.121 2.122 2.779zM18.814 11.207l2.9 2.9a2.37 2.37 0 010 3.355l-2.9 2.9-2.121-2.121 2.121-7.034z"/></svg>
               Get it on Google Play
             </a>
-            <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="btn-secondary">
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="btn-secondary" data-umami-event="click-github-hero">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
               View on GitHub
             </a>
           </div>
           <div class="hero-subtext" style="margin-top: 14px; font-size: 0.85rem; color: #a1a1aa;">
-            Want pre-release builds? <a href="https://play.google.com/apps/testing/com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" style="color: #10b981; text-decoration: underline;">Join Open Beta Testing Track</a>
+            Want pre-release builds? <a href="https://play.google.com/apps/testing/com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" style="color: #10b981; text-decoration: underline;" data-umami-event="click-openbeta-hero">Join Open Beta Testing Track</a>
           </div>
         </div>
 
@@ -173,12 +176,12 @@
       </div>
 
       <div class="tab-nav">
-        <button class="tab-btn active" data-stack="xfce">XFCE4 Desktop</button>
-        <button class="tab-btn" data-stack="node">Node.js Stack</button>
-        <button class="tab-btn" data-stack="python">Python 3 Stack</button>
-        <button class="tab-btn" data-stack="android">Android Dev Tools</button>
-        <button class="tab-btn" data-stack="nginx">NGINX & SQLite</button>
-        <button class="tab-btn" data-stack="ssh">OpenSSH Server</button>
+        <button class="tab-btn active" data-stack="xfce" data-umami-event="click-stack-tab-xfce">XFCE4 Desktop</button>
+        <button class="tab-btn" data-stack="node" data-umami-event="click-stack-tab-node">Node.js Stack</button>
+        <button class="tab-btn" data-stack="python" data-umami-event="click-stack-tab-python">Python 3 Stack</button>
+        <button class="tab-btn" data-stack="android" data-umami-event="click-stack-tab-android">Android Dev Tools</button>
+        <button class="tab-btn" data-stack="nginx" data-umami-event="click-stack-tab-nginx">NGINX & SQLite</button>
+        <button class="tab-btn" data-stack="ssh" data-umami-event="click-stack-tab-ssh">OpenSSH Server</button>
       </div>
 
       <div class="stack-content">
@@ -194,7 +197,7 @@
               <span class="tag-item">novnc</span>
               <span class="tag-item">dbus-x11</span>
             </div>
-            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Desktop Setup Logic →</a>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary" data-umami-event="click-stack-github-xfce">View Desktop Setup Logic →</a>
           </div>
           <div class="terminal-window">
             <div class="terminal-header">
@@ -228,7 +231,7 @@
               <span class="tag-item">git</span>
               <span class="tag-item">neovim</span>
             </div>
-            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Installation Logic →</a>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary" data-umami-event="click-stack-github-node">View Installation Logic →</a>
           </div>
           <div class="terminal-window">
             <div class="terminal-header">
@@ -262,7 +265,7 @@
               <span class="tag-item">build-essential</span>
               <span class="tag-item">git</span>
             </div>
-            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Installation Logic →</a>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary" data-umami-event="click-stack-github-python">View Installation Logic →</a>
           </div>
           <div class="terminal-window">
             <div class="terminal-header">
@@ -292,7 +295,7 @@
               <span class="tag-item">android-sdk-platform-tools</span>
               <span class="tag-item">gradle</span>
             </div>
-            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Installation Logic →</a>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary" data-umami-event="click-stack-github-android">View Installation Logic →</a>
           </div>
           <div class="terminal-window">
             <div class="terminal-header">
@@ -322,7 +325,7 @@
               <span class="tag-item">sqlite3</span>
               <span class="tag-item">curl</span>
             </div>
-            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Installation Logic →</a>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary" data-umami-event="click-stack-github-nginx">View Installation Logic →</a>
           </div>
           <div class="terminal-window">
             <div class="terminal-header">
@@ -351,7 +354,7 @@
               <span class="tag-item">openssh-server</span>
               <span class="tag-item">port 2222</span>
             </div>
-            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary">View Installation Logic →</a>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary" data-umami-event="click-stack-github-ssh">View Installation Logic →</a>
           </div>
           <div class="terminal-window">
             <div class="terminal-header">
@@ -392,10 +395,10 @@
             <h3 class="timeline-title">Project Inception on XDA</h3>
             <p class="timeline-desc">First created on XDA Developers as the "Ubuntu Installer" and "Complete Linux Installer" project, pioneering chroot-based Linux deployments on early Android devices.</p>
             <div class="archive-links">
-              <a href="https://xdaforums.com/t/app-1-6-ubuntu-installer-please-close-thread-moved-to-new-thread.1390351/" target="_blank" rel="noopener" class="archive-link">
+              <a href="https://xdaforums.com/t/app-1-6-ubuntu-installer-please-close-thread-moved-to-new-thread.1390351/" target="_blank" rel="noopener" class="archive-link" data-umami-event="click-history-xda-2011">
                 ↗ XDA Ubuntu Installer Thread (2011)
               </a>
-              <a href="https://xdaforums.com/t/app-linux-on-android-project-complete-linux-installer.1585009/" target="_blank" rel="noopener" class="archive-link">
+              <a href="https://xdaforums.com/t/app-linux-on-android-project-complete-linux-installer.1585009/" target="_blank" rel="noopener" class="archive-link" data-umami-event="click-history-xda-main">
                 ↗ XDA Complete Linux Installer Thread
               </a>
             </div>
@@ -410,7 +413,7 @@
             <h3 class="timeline-title">LinuxOnAndroid.com & Wide Adoption</h3>
             <p class="timeline-desc">Expanded distribution images (Ubuntu, Debian, Fedora, Arch) and custom rootfs image mounting tools hosted on linuxonandroid.com.</p>
             <div class="archive-links">
-              <a href="https://web.archive.org/web/20170805185342/http://linuxonandroid.com/" target="_blank" rel="noopener" class="archive-link">
+              <a href="https://web.archive.org/web/20170805185342/http://linuxonandroid.com/" target="_blank" rel="noopener" class="archive-link" data-umami-event="click-history-wayback-2017">
                 ↗ Historic Site Archive (Wayback Machine 2017)
               </a>
             </div>
@@ -425,7 +428,7 @@
             <h3 class="timeline-title">100% Rootless Jetpack Compose Rebirth</h3>
             <p class="timeline-desc">Rebuilt from the ground up: complete rootless operation via PRoot ptrace, POSIX PTY native C++ bridge, Jetpack Compose Material3 UI, and arch-aware mirror automation.</p>
             <div class="archive-links">
-              <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="archive-link">
+              <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="archive-link" data-umami-event="click-history-github-modern">
                 ↗ Modern GitHub Repository
               </a>
             </div>
@@ -449,8 +452,8 @@
           <span class="step-num">01</span>
           <h3 class="step-title">Download on Google Play</h3>
           <p class="step-text">Install Complete Linux Installer directly from the Google Play Store, or join open beta testing for pre-release builds.</p>
-          <a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" class="archive-link" style="font-weight: 700; color: #10b981;">Get on Google Play Store →</a>
-          <div style="margin-top: 6px;"><a href="https://play.google.com/apps/testing/com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" class="archive-link" style="font-size: 0.82rem; color: #71717a;">Join Open Beta Track →</a></div>
+          <a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" class="archive-link" style="font-weight: 700; color: #10b981;" data-umami-event="click-playstore-setup">Get on Google Play Store →</a>
+          <div style="margin-top: 6px;"><a href="https://play.google.com/apps/testing/com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" class="archive-link" style="font-size: 0.82rem; color: #71717a;" data-umami-event="click-openbeta-setup">Join Open Beta Track →</a></div>
         </div>
 
         <div class="step-card">
@@ -483,28 +486,28 @@
         <div>
           <div class="footer-title">Project Links</div>
           <ul class="footer-links">
-            <li><a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener">Google Play Store</a></li>
-            <li><a href="https://play.google.com/apps/testing/com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener">Google Play Open Beta</a></li>
-            <li><a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener">GitHub Repository</a></li>
-            <li><a href="https://github.com/devwithzachary/LinuxOnAndroid/blob/main/LICENSE" target="_blank" rel="noopener">GPL-2.0 License</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#stacks">Software Stacks</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" data-umami-event="click-playstore-footer">Google Play Store</a></li>
+            <li><a href="https://play.google.com/apps/testing/com.devwithzachary.completelinuxinstaller" target="_blank" rel="noopener" data-umami-event="click-openbeta-footer">Google Play Open Beta</a></li>
+            <li><a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" data-umami-event="click-github-footer">GitHub Repository</a></li>
+            <li><a href="https://github.com/devwithzachary/LinuxOnAndroid/blob/main/LICENSE" target="_blank" rel="noopener" data-umami-event="click-license-footer">GPL-2.0 License</a></li>
+            <li><a href="#features" data-umami-event="click-features-footer">Features</a></li>
+            <li><a href="#stacks" data-umami-event="click-stacks-footer">Software Stacks</a></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-title">Historical Archives</div>
           <ul class="footer-links">
-            <li><a href="https://web.archive.org/web/20170805185342/http://linuxonandroid.com/" target="_blank" rel="noopener">Wayback Archive (2017)</a></li>
-            <li><a href="https://xdaforums.com/t/app-linux-on-android-project-complete-linux-installer.1585009/" target="_blank" rel="noopener">XDA Main Thread</a></li>
-            <li><a href="https://xdaforums.com/t/app-1-6-ubuntu-installer-please-close-thread-moved-to-new-thread.1390351/" target="_blank" rel="noopener">XDA Original Thread (2011)</a></li>
+            <li><a href="https://web.archive.org/web/20170805185342/http://linuxonandroid.com/" target="_blank" rel="noopener" data-umami-event="click-wayback-2017-footer">Wayback Archive (2017)</a></li>
+            <li><a href="https://xdaforums.com/t/app-linux-on-android-project-complete-linux-installer.1585009/" target="_blank" rel="noopener" data-umami-event="click-xda-main-footer">XDA Main Thread</a></li>
+            <li><a href="https://xdaforums.com/t/app-1-6-ubuntu-installer-please-close-thread-moved-to-new-thread.1390351/" target="_blank" rel="noopener" data-umami-event="click-xda-2011-footer">XDA Original Thread (2011)</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>© 2011 – 2026 Linux on Android Project. Released under GPL-2.0.</div>
-        <div>Hosted on GitHub Pages • linuxonandroid.com</div>
+        <div>Hosted on GitHub Pages • linuxonandroid.com • <a href="privacy.html" style="color: #a1a1aa; text-decoration: underline;" data-umami-event="click-privacy-footer">Privacy Policy</a></div>
       </div>
     </div>
   </footer>
