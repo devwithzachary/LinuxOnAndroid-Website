@@ -6,10 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Linux on Android | Complete Linux Installer & PRoot Engine</title>
   <meta name="description"
-    content="Run full Ubuntu Linux CLI environments natively on Android without root. Complete Linux Installer brings a 100% rootless PRoot engine, VT100 terminal emulator, and developer software stacks to your phone or tablet.">
+    content="Run full Linux desktop and CLI environments natively on Android without root. Complete Linux Installer brings 6 official Linux distributions (Ubuntu, Debian, Alpine, Arch, Kali, Void), concurrent multi-tab terminal emulation, XFCE desktop GUI, and one-click developer stacks directly to your phone or tablet.">
   <meta name="keywords"
-    content="Linux on Android, Complete Linux Installer, PRoot Android, Ubuntu on Android, Rootless Linux, Android Linux terminal, CLI developer tools">
+    content="Linux on Android, Complete Linux Installer, PRoot Android, Ubuntu on Android, Debian Android, Alpine Linux, Arch Linux, Kali Linux, Void Linux, Rootless Linux, Android Linux terminal, XFCE Android, CLI developer tools">
   <link rel="canonical" href="https://linuxonandroid.com/">
+
+  <!-- OpenGraph & Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Linux on Android | Complete Linux Installer & PRoot Engine">
+  <meta property="og:description" content="Run full Linux desktop and CLI environments natively on Android without root. Complete Linux Installer brings 6 official Linux distributions, concurrent multi-tab terminal, and 1-click desktop stacks.">
+  <meta property="og:url" content="https://linuxonandroid.com/">
+  <meta property="og:image" content="https://linuxonandroid.com/assets/1_dashboard.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,35 +41,32 @@
     <div class="container">
       <a href="#" class="brand" data-umami-event="click-brand-logo">
         <img src="assets/logo.png" alt="Linux on Android Logo" class="brand-logo">
-        <span>Linux on Android</span>
+        <span class="brand-name">Linux on Android</span>
       </a>
 
-      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation"
-        data-umami-event="toggle-mobile-menu">
-        ☰
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
       </button>
 
       <nav class="nav-links" id="nav-links">
-        <a href="#features" class="nav-link" data-umami-event="click-nav-features">Features</a>
-        <a href="#stacks" class="nav-link" data-umami-event="click-nav-stacks">Software Stacks</a>
-        <a href="#history" class="nav-link" data-umami-event="click-nav-history">Project History</a>
-        <a href="#setup" class="nav-link" data-umami-event="click-nav-setup">Quick Setup</a>
-        <a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller"
-          target="_blank" rel="noopener" class="nav-btn nav-btn-play" style="background: #10b981; margin-right: 8px;"
-          data-umami-event="click-playstore-nav">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M3.609 1.814L13.792 12 3.61 22.186A2.373 2.373 0 013 20.5v-17c0-.678.274-1.303.609-1.686zM15.207 13.414l2.9-2.9-2.9-2.9-2.122 2.121 2.122 2.779zM18.814 11.207l2.9 2.9a2.37 2.37 0 010 3.355l-2.9 2.9-2.121-2.121 2.121-7.034z" />
-          </svg>
-          Get on Google Play
-        </a>
+        <a href="#features" data-umami-event="click-nav-features">Features</a>
+        <a href="#showcase" data-umami-event="click-nav-showcase">Screenshots</a>
+        <a href="#distros" data-umami-event="click-nav-distros">Distributions</a>
+        <a href="#stacks" data-umami-event="click-nav-stacks">Software Stacks</a>
+        <a href="#history" data-umami-event="click-nav-history">Heritage</a>
+        <a href="#setup" data-umami-event="click-nav-setup">Get Started</a>
         <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="nav-btn"
-          data-umami-event="click-github-nav">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          data-umami-event="click-nav-github">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
           </svg>
-          GitHub Repository
+          GitHub
         </a>
       </nav>
     </div>
@@ -75,15 +79,15 @@
         <div class="hero-content">
           <div class="badge">
             <span class="badge-dot"></span>
-            100% Rootless • PRoot Subsystem Engine
+            v1.5.0 Released • 6 Distros • 100% Rootless PRoot Subsystem
           </div>
           <h1 class="hero-title">
-            Run Full <span class="gradient-text">Linux Desktop & CLI Environments</span> on Android
+            Run Full <span class="gradient-text">Linux Desktops & Multi-Distro CLI</span> on Android
           </h1>
           <p class="hero-description">
-            Complete Linux Installer brings full Ubuntu desktop environments (XFCE4 + VNC), VT100 pseudo-terminal
-            emulation, and one-click developer stacks directly to your Android device — without needing root
-            permissions.
+            Complete Linux Installer brings 6 official Linux distributions (Ubuntu, Debian, Alpine, Arch, Kali, Void),
+            concurrent multi-tab terminal emulation, XFCE desktop GUI, and one-click developer stacks directly to your
+            Android device - 100% rootless!
           </p>
           <div class="hero-ctas">
             <a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller"
@@ -117,7 +121,7 @@
           <div class="hero-mockup-glow"></div>
           <div class="phone-frame">
             <div class="phone-screen">
-              <img src="assets/app_screenshot.png" alt="Linux on Android App Screenshot">
+              <img src="assets/1_dashboard.png" alt="Linux on Android Multi-Container Dashboard" width="340" height="755" fetchpriority="high">
             </div>
           </div>
         </div>
@@ -130,20 +134,156 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Linux Distros (Ubuntu, Alpine, Arch, ...)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">Multi-Tab</div>
+          <div class="stat-label">Concurrent POSIX PTY Terminals</div>
+        </div>
+        <div class="stat-card">
           <div class="stat-num">100%</div>
-          <div class="stat-label">Rootless PRoot Operation</div>
+          <div class="stat-label">Rootless User-Space PRoot Engine</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">XFCE4</div>
           <div class="stat-label">Graphical Desktop GUI (VNC / noVNC)</div>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Architectures (ARM64, x86_64, ARMv7)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Screenshots Showcase -->
+  <section class="showcase-section" id="showcase">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Visual Walkthrough</div>
+        <h2 class="section-title">Explore Linux on Android in Action</h2>
+        <p class="section-subtitle">From multi-container management to concurrent terminal tabs and 1-click desktop stacks, explore the native Android interface.</p>
+      </div>
+
+      <!-- Showcase Tabs Bar -->
+      <div class="showcase-tabs-wrapper">
+        <div class="showcase-tabs" role="tablist">
+          <button class="showcase-tab active" data-index="0" role="tab" aria-selected="true" data-umami-event="click-showcase-tab-dashboard">
+            <span class="tab-icon">📱</span>
+            <span class="tab-text">Dashboard</span>
+          </button>
+          <button class="showcase-tab" data-index="1" role="tab" aria-selected="false" data-umami-event="click-showcase-tab-terminal">
+            <span class="tab-icon">⚡</span>
+            <span class="tab-text">Terminal</span>
+          </button>
+          <button class="showcase-tab" data-index="2" role="tab" aria-selected="false" data-umami-event="click-showcase-tab-overview">
+            <span class="tab-icon">📊</span>
+            <span class="tab-text">System Dials</span>
+          </button>
+          <button class="showcase-tab" data-index="3" role="tab" aria-selected="false" data-umami-event="click-showcase-tab-software">
+            <span class="tab-icon">🛠️</span>
+            <span class="tab-text">Software Hub</span>
+          </button>
+          <button class="showcase-tab" data-index="4" role="tab" aria-selected="false" data-umami-event="click-showcase-tab-distros">
+            <span class="tab-icon">🐧</span>
+            <span class="tab-text">Distro Wizard</span>
+          </button>
+          <button class="showcase-tab" data-index="5" role="tab" aria-selected="false" data-umami-event="click-showcase-tab-onboarding">
+            <span class="tab-icon">🚀</span>
+            <span class="tab-text">100% Rootless</span>
+          </button>
         </div>
-        <div class="stat-card">
-          <div class="stat-num">1-Click</div>
-          <div class="stat-label">Desktop & Developer Stacks</div>
+      </div>
+
+      <!-- Main Showcase Container -->
+      <div class="showcase-display">
+        <!-- Phone Frame Column -->
+        <div class="showcase-mockup-col">
+          <div class="phone-frame showcase-phone">
+            <div class="phone-screen">
+              <img id="showcase-img" src="assets/1_dashboard.png" alt="Linux on Android Multi-Container Dashboard" width="340" height="755">
+            </div>
+          </div>
+        </div>
+
+        <!-- Explanatory Details Card Column -->
+        <div class="showcase-details-col">
+          <div class="showcase-card">
+            <div class="showcase-badge" id="showcase-badge">CONTAINER MANAGEMENT</div>
+            <h3 class="showcase-title" id="showcase-title">Multi-Container Dashboard</h3>
+            <p class="showcase-desc" id="showcase-desc">
+              Manage multiple isolated Linux environments on a single Android device. Start, stop, monitor, or launch interactive sessions for each container independently with clear status indicators and quick action shortcuts.
+            </p>
+
+            <div class="showcase-highlights" id="showcase-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">✓</span>
+                <span class="highlight-text">Run multiple distributions side-by-side (e.g. Ubuntu + Alpine)</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✓</span>
+                <span class="highlight-text">Instant status badges displaying running vs stopped container states</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✓</span>
+                <span class="highlight-text">One-tap quick actions for Terminal, Hardware Overview, and Settings</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✓</span>
+                <span class="highlight-text">Fast container setup wizard via the prominent + New Container button</span>
+              </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="showcase-controls">
+              <div class="showcase-arrows">
+                <button class="ctrl-btn" id="ctrl-prev" aria-label="Previous screenshot" data-umami-event="click-showcase-prev">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  <span>Prev</span>
+                </button>
+                <button class="ctrl-btn" id="ctrl-next" aria-label="Next screenshot" data-umami-event="click-showcase-next">
+                  <span>Next</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+
+              <div class="showcase-dots" id="showcase-dots" role="tablist">
+                <span class="dot active" data-index="0" role="button" aria-label="Go to screenshot 1"></span>
+                <span class="dot" data-index="1" role="button" aria-label="Go to screenshot 2"></span>
+                <span class="dot" data-index="2" role="button" aria-label="Go to screenshot 3"></span>
+                <span class="dot" data-index="3" role="button" aria-label="Go to screenshot 4"></span>
+                <span class="dot" data-index="4" role="button" aria-label="Go to screenshot 5"></span>
+                <span class="dot" data-index="5" role="button" aria-label="Go to screenshot 6"></span>
+              </div>
+
+              <div class="showcase-counter" id="showcase-counter">1 of 6</div>
+            </div>
+
+            <!-- Miniature Thumbnails Bar -->
+            <div class="showcase-thumbs">
+              <button class="thumb-btn active" data-index="0" aria-label="View Dashboard screenshot">
+                <img src="assets/1_dashboard.png" alt="Dashboard thumbnail" loading="lazy">
+                <span class="thumb-caption">Dashboard</span>
+              </button>
+              <button class="thumb-btn" data-index="1" aria-label="View Terminal screenshot">
+                <img src="assets/2_terminal.png" alt="Terminal thumbnail" loading="lazy">
+                <span class="thumb-caption">Terminal</span>
+              </button>
+              <button class="thumb-btn" data-index="2" aria-label="View Overview screenshot">
+                <img src="assets/3_container_overview.png" alt="Overview thumbnail" loading="lazy">
+                <span class="thumb-caption">Dials</span>
+              </button>
+              <button class="thumb-btn" data-index="3" aria-label="View Software Hub screenshot">
+                <img src="assets/4_software_hub.png" alt="Software Hub thumbnail" loading="lazy">
+                <span class="thumb-caption">Stacks</span>
+              </button>
+              <button class="thumb-btn" data-index="4" aria-label="View Distro Wizard screenshot">
+                <img src="assets/5_distro_wizard.png" alt="Distro Wizard thumbnail" loading="lazy">
+                <span class="thumb-caption">Distros</span>
+              </button>
+              <button class="thumb-btn" data-index="5" aria-label="View Onboarding screenshot">
+                <img src="assets/6_welcome_onboarding.png" alt="Onboarding thumbnail" loading="lazy">
+                <span class="thumb-caption">Rootless</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -153,54 +293,161 @@
   <section class="features" id="features">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">Capabilities</div>
+        <div class="section-tag">Core Capabilities</div>
         <h2 class="section-title">Everything You Need for Mobile Desktop & CLI</h2>
-        <p class="section-subtitle">Turn any Android phone or tablet into a full graphical desktop environment or
-          portable development workstation.</p>
+        <p class="section-subtitle">Turn any Android phone or tablet into a full graphical desktop environment or portable Linux development workstation.</p>
       </div>
 
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">🔒</div>
-          <h3 class="feature-title">100% Rootless Freedom</h3>
-          <p class="feature-text">Operates entirely in user-space via native PRoot ptrace system call interception. No
-            root access, bootloader unlocking, or system modifications required.</p>
+          <h3 class="feature-title">100% Rootless Security</h3>
+          <p class="feature-text">Operates entirely in Android user-space via native PRoot ptrace system call interception. No root access, bootloader unlocking, or Knox tripping required.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🐧</div>
+          <h3 class="feature-title">6 Official Linux Distros</h3>
+          <p class="feature-text">First-class support for Ubuntu 24.04, Debian 12, Alpine Linux 3.20, Arch Linux, Kali Linux, and Void Linux with automatic mirror detection and rootfs SHA256 integrity verification.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Concurrent Multi-Tab Terminal</h3>
+          <p class="feature-text">Built-in VT100/XTerm terminal emulator supporting multiple simultaneous POSIX PTY shell sessions, live process switching, ANSI colors, and a custom hardware toolbar (Ctrl, Alt, Esc, Tab, Arrows).</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">🖥️</div>
           <h3 class="feature-title">Full Graphical Desktop (GUI)</h3>
-          <p class="feature-text">One-click installation of full lightweight XFCE 4 desktop environment with TigerVNC
-            server and web-based noVNC for windowed GUI access on phone or tablet screens.</p>
+          <p class="feature-text">One-click installation of a lightweight XFCE 4 desktop environment with TigerVNC server and web-based noVNC streaming for windowed desktop productivity on phone or tablet screens.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <h3 class="feature-title">Interactive Native Terminal</h3>
-          <p class="feature-text">Built-in VT100/XTerm terminal emulator with full ANSI color support, PTY window
-            resize, scroll buffer, and custom quick-action keys (Ctrl, Alt, Esc, Tab, Arrows).</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">💻</div>
-          <h3 class="feature-title">Full Shell & Command Line</h3>
-          <p class="feature-text">Interactive POSIX PTY terminal environment supporting Zsh, Bash, Tmux, Htop, Neovim,
-            and custom toolbar key bindings.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">🌐</div>
-          <h3 class="feature-title">Multi-Arch Engine</h3>
-          <p class="feature-text">Automatic architecture detection and native execution support for 64-bit ARM
-            (aarch64), 64-bit x86 (amd64), and 32-bit ARM (armhf) processors.</p>
+          <div class="feature-icon">📊</div>
+          <h3 class="feature-title">Real-Time System Telemetry</h3>
+          <p class="feature-text">Live hardware gauges displaying instantaneous CPU utilization, RAM consumption dials, internal storage tracking, and active listening port detection.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">📁</div>
-          <h3 class="feature-title">Storage & Device Binding</h3>
-          <p class="feature-text">Automatic mounting of Android storage (<code class="prompt">/sdcard</code>) and system
-            pseudofs (<code class="prompt">/proc</code>, <code class="prompt">/sys</code>, <code
-              class="prompt">/dev</code>) alongside Link2Symlink SELinux compatibility.</p>
+          <h3 class="feature-title">Storage & SD Card Mounting</h3>
+          <p class="feature-text">Automatic mounting of Android storage (<code class="prompt">/sdcard</code>) and external SD cards (<code class="prompt">/media/sdcard</code>) alongside Link2Symlink SELinux compatibility for easy file sharing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Distributions Grid -->
+  <section class="distros-section" id="distros">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Distribution Catalog</div>
+        <h2 class="section-title">Choose Your Preferred Linux Distribution</h2>
+        <p class="section-subtitle">Deploy the ideal operating system for your workflow, from ultra-lightweight containers to bleeding-edge rolling environments.</p>
+      </div>
+
+      <div class="distros-grid">
+        <!-- Ubuntu -->
+        <div class="distro-card">
+          <div class="distro-header">
+            <div class="distro-icon-wrapper" style="background: rgba(233, 84, 32, 0.15); color: #E95420;">
+              <span class="distro-symbol">U</span>
+            </div>
+            <div>
+              <h3 class="distro-name">Ubuntu 24.04 LTS</h3>
+              <span class="distro-tag">Noble Numbat • APT</span>
+            </div>
+          </div>
+          <p class="distro-desc">The standard in Linux computing. Features Long-Term Support stability, an enormous software package repository, and broad toolchain compatibility.</p>
+          <div class="distro-footer">
+            <span class="distro-meta">Recommended for Beginners & Servers</span>
+          </div>
+        </div>
+
+        <!-- Debian -->
+        <div class="distro-card">
+          <div class="distro-header">
+            <div class="distro-icon-wrapper" style="background: rgba(215, 10, 83, 0.15); color: #D70A53;">
+              <span class="distro-symbol">D</span>
+            </div>
+            <div>
+              <h3 class="distro-name">Debian 12</h3>
+              <span class="distro-tag">Bookworm • APT</span>
+            </div>
+          </div>
+          <p class="distro-desc">The rock-solid universal operating system. Renowned for mission-critical reliability, predictable packages, and rock-solid system stability.</p>
+          <div class="distro-footer">
+            <span class="distro-meta">Ideal for Headless Services & Long-running Daemons</span>
+          </div>
+        </div>
+
+        <!-- Alpine -->
+        <div class="distro-card">
+          <div class="distro-header">
+            <div class="distro-icon-wrapper" style="background: rgba(13, 89, 137, 0.15); color: #0D5989;">
+              <span class="distro-symbol">A</span>
+            </div>
+            <div>
+              <h3 class="distro-name">Alpine Linux 3.20</h3>
+              <span class="distro-tag">musl libc • APK</span>
+            </div>
+          </div>
+          <p class="distro-desc">Ultra-compact, security-oriented distribution based on musl libc and busybox. The rootfs is roughly 5MB, making it lightning-fast to download and launch.</p>
+          <div class="distro-footer">
+            <span class="distro-meta">Ideal for Resource-Constrained Devices</span>
+          </div>
+        </div>
+
+        <!-- Arch -->
+        <div class="distro-card">
+          <div class="distro-header">
+            <div class="distro-icon-wrapper" style="background: rgba(23, 147, 209, 0.15); color: #1793D1;">
+              <span class="distro-symbol">A</span>
+            </div>
+            <div>
+              <h3 class="distro-name">Arch Linux</h3>
+              <span class="distro-tag">Rolling Release • Pacman</span>
+            </div>
+          </div>
+          <p class="distro-desc">Bleeding-edge rolling release distribution delivering the latest upstream Linux software packages and kernels via the blazing fast pacman package manager.</p>
+          <div class="distro-footer">
+            <span class="distro-meta">Ideal for Power Users & Modern Toolchains</span>
+          </div>
+        </div>
+
+        <!-- Kali -->
+        <div class="distro-card">
+          <div class="distro-header">
+            <div class="distro-icon-wrapper" style="background: rgba(85, 127, 250, 0.15); color: #557FFA;">
+              <span class="distro-symbol">K</span>
+            </div>
+            <div>
+              <h3 class="distro-name">Kali Linux</h3>
+              <span class="distro-tag">Rolling • Security Tools</span>
+            </div>
+          </div>
+          <p class="distro-desc">The gold standard in information security, penetration testing, and digital forensics. Access thousands of ethical hacking and security auditing packages on your phone.</p>
+          <div class="distro-footer">
+            <span class="distro-meta">Ideal for Security Audits & Network Analysis</span>
+          </div>
+        </div>
+
+        <!-- Void -->
+        <div class="distro-card">
+          <div class="distro-header">
+            <div class="distro-icon-wrapper" style="background: rgba(71, 140, 77, 0.15); color: #478C4D;">
+              <span class="distro-symbol">V</span>
+            </div>
+            <div>
+              <h3 class="distro-name">Void Linux</h3>
+              <span class="distro-tag">Independent • XBPS</span>
+            </div>
+          </div>
+          <p class="distro-desc">An independent, general-purpose Linux distribution built from scratch. Utilizes the lightweight XBPS package manager and minimalist runit init architecture.</p>
+          <div class="distro-footer">
+            <span class="distro-meta">Ideal for Minimalist Non-Systemd Workflows</span>
+          </div>
         </div>
       </div>
     </div>
@@ -212,16 +459,14 @@
       <div class="section-header">
         <div class="section-tag">One-Click Software Stacks</div>
         <h2 class="section-title">Pre-Configured Desktop & Developer Workstations</h2>
-        <p class="section-subtitle">Install complete desktop environments and CLI developer stacks with a single tap in
-          the Software Hub.</p>
+        <p class="section-subtitle">Install complete desktop environments and CLI developer stacks with a single tap in the Software Hub.</p>
       </div>
 
       <div class="tab-nav">
         <button class="tab-btn active" data-stack="xfce" data-umami-event="click-stack-tab-xfce">XFCE4 Desktop</button>
         <button class="tab-btn" data-stack="node" data-umami-event="click-stack-tab-node">Node.js Stack</button>
         <button class="tab-btn" data-stack="python" data-umami-event="click-stack-tab-python">Python 3 Stack</button>
-        <button class="tab-btn" data-stack="android" data-umami-event="click-stack-tab-android">Android Dev
-          Tools</button>
+        <button class="tab-btn" data-stack="android" data-umami-event="click-stack-tab-android">Android Dev Tools</button>
         <button class="tab-btn" data-stack="nginx" data-umami-event="click-stack-tab-nginx">NGINX & SQLite</button>
         <button class="tab-btn" data-stack="ssh" data-umami-event="click-stack-tab-ssh">OpenSSH Server</button>
       </div>
@@ -231,17 +476,16 @@
         <div class="stack-panel active" id="stack-xfce">
           <div class="stack-info">
             <h3>XFCE4 Graphical Desktop & VNC</h3>
-            <p>Full lightweight graphical Linux desktop environment featuring XFCE4 desktop manager, XFCE terminal,
-              TigerVNC server, and noVNC web access.</p>
+            <p>Full-featured, lightweight graphical desktop environment with XFCE4, TigerVNC server, and browser-accessible noVNC. Includes mouse emulation, clipboard sync, and window manager.</p>
             <div class="tag-list">
               <span class="tag-item">xfce4</span>
               <span class="tag-item">xfce4-terminal</span>
               <span class="tag-item">tigervnc-standalone-server</span>
               <span class="tag-item">novnc</span>
-              <span class="tag-item">dbus-x11</span>
+              <span class="tag-item">websockify</span>
             </div>
             <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary"
-              data-umami-event="click-stack-github-xfce">View Desktop Setup Logic →</a>
+              data-umami-event="click-stack-github-xfce">View Installation Logic →</a>
           </div>
           <div class="terminal-window">
             <div class="terminal-header">
@@ -250,13 +494,15 @@
                 <span class="dot dot-yellow"></span>
                 <span class="dot dot-green"></span>
               </div>
-              <span class="terminal-title">bash — linuxonandroid</span>
+              <span class="terminal-title">bash: linuxonandroid</span>
             </div>
             <div class="terminal-body">
-              <p><span class="prompt">root@android:~#</span> <span class="cmd">vncserver :1 -geometry 1280x720</span>
-              </p>
-              <p class="output">New 'android:1 (root)' desktop is android:1</p>
-              <p class="output">Starting applications specified in /root/.vnc/xstartup</p>
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">vncserver :1 -geometry 1280x720</span></p>
+              <p class="output">New 'android:1 (ubuntu)' desktop is android:1</p>
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">websockify --web /usr/share/novnc 6080 localhost:5901</span></p>
+              <p class="output">WebSocket server settings:</p>
+              <p class="output">  - Listen on :6080</p>
+              <p class="output">  - Web server active at /usr/share/novnc</p>
             </div>
           </div>
         </div>
@@ -264,16 +510,14 @@
         <!-- Node.js Panel -->
         <div class="stack-panel" id="stack-node">
           <div class="stack-info">
-            <h3>Node.js Developer Stack</h3>
-            <p>Complete JavaScript & TypeScript backend environment featuring Node.js, npm, Yarn, GCC build-essential,
-              Neovim, and Git.</p>
+            <h3>Node.js & Web Development</h3>
+            <p>Modern JavaScript/TypeScript development runtime environment complete with Node.js LTS, npm, yarn, Git, and build essentials.</p>
             <div class="tag-list">
               <span class="tag-item">nodejs</span>
               <span class="tag-item">npm</span>
-              <span class="tag-item">yarnpkg</span>
-              <span class="tag-item">build-essential</span>
               <span class="tag-item">git</span>
-              <span class="tag-item">neovim</span>
+              <span class="tag-item">curl</span>
+              <span class="tag-item">build-essential</span>
             </div>
             <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary"
               data-umami-event="click-stack-github-node">View Installation Logic →</a>
@@ -285,7 +529,7 @@
                 <span class="dot dot-yellow"></span>
                 <span class="dot dot-green"></span>
               </div>
-              <span class="terminal-title">bash — linuxonandroid</span>
+              <span class="terminal-title">bash: linuxonandroid</span>
             </div>
             <div class="terminal-body">
               <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">node -v</span></p>
@@ -300,8 +544,7 @@
         <div class="stack-panel" id="stack-python">
           <div class="stack-info">
             <h3>Python 3 Developer Stack</h3>
-            <p>Modern Python development environment with Python 3, pip3, virtualenv, GCC C/C++ compiler tools, Git, and
-              Neovim.</p>
+            <p>Modern Python development environment with Python 3, pip3, virtualenv, GCC C/C++ compiler tools, Git, and Neovim.</p>
             <div class="tag-list">
               <span class="tag-item">python3</span>
               <span class="tag-item">python3-pip</span>
@@ -319,11 +562,11 @@
                 <span class="dot dot-yellow"></span>
                 <span class="dot dot-green"></span>
               </div>
-              <span class="terminal-title">bash — linuxonandroid</span>
+              <span class="terminal-title">bash: linuxonandroid</span>
             </div>
             <div class="terminal-body">
               <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">python3 --version</span></p>
-              <p class="output">Python 3.14.0</p>
+              <p class="output">Python 3.12.3</p>
               <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">pip3 list</span></p>
               <p class="output">Package Version --- pip 24.0, setuptools 69.5.1</p>
             </div>
@@ -334,8 +577,7 @@
         <div class="stack-panel" id="stack-android">
           <div class="stack-info">
             <h3>Android Developer Tools</h3>
-            <p>Build and debug Android applications inside Linux on Android using OpenJDK 17, ADB, Fastboot, Gradle, and
-              Git.</p>
+            <p>Build and debug Android applications inside Linux on Android using OpenJDK 17, ADB, Fastboot, Gradle, and Git.</p>
             <div class="tag-list">
               <span class="tag-item">openjdk-17-jdk</span>
               <span class="tag-item">android-sdk-platform-tools</span>
@@ -351,7 +593,7 @@
                 <span class="dot dot-yellow"></span>
                 <span class="dot dot-green"></span>
               </div>
-              <span class="terminal-title">bash — linuxonandroid</span>
+              <span class="terminal-title">bash: linuxonandroid</span>
             </div>
             <div class="terminal-body">
               <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">java -version</span></p>
@@ -366,8 +608,7 @@
         <div class="stack-panel" id="stack-nginx">
           <div class="stack-info">
             <h3>NGINX Web Server & SQLite</h3>
-            <p>Turn your Android phone into a local HTTP web server and embedded database system powered by NGINX and
-              SQLite3.</p>
+            <p>Turn your Android phone into a local HTTP web server and embedded database system powered by NGINX and SQLite3.</p>
             <div class="tag-list">
               <span class="tag-item">nginx</span>
               <span class="tag-item">sqlite3</span>
@@ -383,7 +624,7 @@
                 <span class="dot dot-yellow"></span>
                 <span class="dot dot-green"></span>
               </div>
-              <span class="terminal-title">bash — linuxonandroid</span>
+              <span class="terminal-title">bash: linuxonandroid</span>
             </div>
             <div class="terminal-body">
               <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">service nginx start</span></p>
@@ -398,8 +639,7 @@
         <div class="stack-panel" id="stack-ssh">
           <div class="stack-info">
             <h3>OpenSSH Server Daemon</h3>
-            <p>Access your Android Linux environment remotely from your laptop or PC command line over local Wi-Fi or
-              LAN.</p>
+            <p>Access your Android Linux environment remotely from your laptop or PC command line over local Wi-Fi or LAN.</p>
             <div class="tag-list">
               <span class="tag-item">openssh-server</span>
               <span class="tag-item">port 2222</span>
@@ -414,14 +654,13 @@
                 <span class="dot dot-yellow"></span>
                 <span class="dot dot-green"></span>
               </div>
-              <span class="terminal-title">bash — linuxonandroid</span>
+              <span class="terminal-title">bash: linuxonandroid</span>
             </div>
             <div class="terminal-body">
               <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">/usr/sbin/sshd -p 2222</span></p>
               <p class="output">Server listening on port 2222.</p>
-              <p><span class="prompt">user@desktop:~$</span> <span class="cmd">ssh ubuntu@192.168.1.50 -p 2222</span>
-              </p>
-              <p class="output">Welcome to Ubuntu 26.04 LTS (GNU/Linux aarch64)</p>
+              <p><span class="prompt">user@desktop:~$</span> <span class="cmd">ssh ubuntu@192.168.1.50 -p 2222</span></p>
+              <p class="output">Welcome to Ubuntu 24.04 LTS (GNU/Linux aarch64)</p>
             </div>
           </div>
         </div>
@@ -434,9 +673,8 @@
     <div class="container">
       <div class="section-header">
         <div class="section-tag">Heritage</div>
-        <h2 class="section-title">15 Years of Innovation (2011 – Present)</h2>
-        <p class="section-subtitle">From early XDA Developers root chroot scripts to a modern 100% rootless Jetpack
-          Compose application.</p>
+        <h2 class="section-title">15 Years of Innovation (2011 - Present)</h2>
+        <p class="section-subtitle">From early XDA Developers root chroot scripts to a modern 100% rootless Jetpack Compose application.</p>
       </div>
 
       <div class="timeline">
@@ -444,10 +682,9 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-date">2011 – 2012</div>
+            <div class="timeline-date">2011 - 2012</div>
             <h3 class="timeline-title">Project Inception on XDA</h3>
-            <p class="timeline-desc">First created on XDA Developers as the "Ubuntu Installer" and "Complete Linux
-              Installer" project, pioneering chroot-based Linux deployments on early Android devices.</p>
+            <p class="timeline-desc">First created on XDA Developers as the "Ubuntu Installer" and "Complete Linux Installer" project, pioneering chroot-based Linux deployments on early Android devices.</p>
             <div class="archive-links">
               <a href="https://xdaforums.com/t/app-1-6-ubuntu-installer-please-close-thread-moved-to-new-thread.1390351/"
                 target="_blank" rel="noopener" class="archive-link" data-umami-event="click-history-xda-2011">
@@ -465,10 +702,9 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-date">2013 – 2017</div>
+            <div class="timeline-date">2013 - 2017</div>
             <h3 class="timeline-title">LinuxOnAndroid.com & Wide Adoption</h3>
-            <p class="timeline-desc">Expanded distribution images (Ubuntu, Debian, Fedora, Arch) and custom rootfs image
-              mounting tools hosted on linuxonandroid.com.</p>
+            <p class="timeline-desc">Expanded distribution images (Ubuntu, Debian, Fedora, Arch) and custom rootfs image mounting tools hosted on linuxonandroid.com.</p>
             <div class="archive-links">
               <a href="https://web.archive.org/web/20170805185342/http://linuxonandroid.com/" target="_blank"
                 rel="noopener" class="archive-link" data-umami-event="click-history-wayback-2017">
@@ -482,10 +718,9 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-date">2026 Modern Architecture</div>
-            <h3 class="timeline-title">100% Rootless Jetpack Compose Rebirth</h3>
-            <p class="timeline-desc">Rebuilt from the ground up: complete rootless operation via PRoot ptrace, POSIX PTY
-              native C++ bridge, Jetpack Compose Material3 UI, and arch-aware mirror automation.</p>
+            <div class="timeline-date">2026 Modern Architecture (v1.5.0)</div>
+            <h3 class="timeline-title">100% Rootless Multi-Distro Rebirth</h3>
+            <p class="timeline-desc">Rebuilt from the ground up: complete rootless operation via PRoot ptrace, 6 official Linux distributions, concurrent multi-tab POSIX PTY terminal, Jetpack Compose Material3 UI, and arch-aware mirror automation.</p>
             <div class="archive-links">
               <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener"
                 class="archive-link" data-umami-event="click-history-github-modern">
@@ -511,8 +746,7 @@
         <div class="step-card">
           <span class="step-num">01</span>
           <h3 class="step-title">Download on Google Play</h3>
-          <p class="step-text">Install Complete Linux Installer directly from the Google Play Store, or join open beta
-            testing for pre-release builds.</p>
+          <p class="step-text">Install Complete Linux Installer directly from the Google Play Store, or join open beta testing for pre-release builds.</p>
           <a href="https://play.google.com/store/apps/details?id=com.devwithzachary.completelinuxinstaller"
             target="_blank" rel="noopener" class="archive-link" style="font-weight: 700; color: #10b981;"
             data-umami-event="click-playstore-setup">Get on Google Play Store →</a>
@@ -524,16 +758,14 @@
 
         <div class="step-card">
           <span class="step-num">02</span>
-          <h3 class="step-title">Run Setup Wizard</h3>
-          <p class="step-text">Launch the app, select your target architecture, and tap <strong>Download & Install
-              RootFS</strong>. The app unpacks and configures Ubuntu automatically.</p>
+          <h3 class="step-title">Choose Distro & Architecture</h3>
+          <p class="step-text">Select from Ubuntu, Debian, Alpine, Arch, Kali, or Void. The wizard automatically detects your architecture (ARM64, x86_64, ARMv7) and downloads verified rootfs tarballs.</p>
         </div>
 
         <div class="step-card">
           <span class="step-num">03</span>
           <h3 class="step-title">Open Terminal & Tools</h3>
-          <p class="step-text">Navigate to the Terminal tab for interactive shell access or open the Software Hub to
-            launch developer software stacks.</p>
+          <p class="step-text">Launch concurrent terminal sessions, monitor hardware dials in real-time, or install the XFCE desktop GUI and developer stacks in one click.</p>
         </div>
       </div>
     </div>
@@ -549,8 +781,7 @@
               style="width: 32px; height: 32px; border-radius: 8px;">
             <span>Linux on Android</span>
           </div>
-          <p class="footer-desc">Open-source rootless Linux environment & installer for Android devices powered by
-            PRoot, Jetpack Compose, and native PTY bridges.</p>
+          <p class="footer-desc">Open-source rootless Linux environment & installer for Android devices powered by PRoot, Jetpack Compose, and native PTY bridges.</p>
         </div>
 
         <div>
@@ -565,6 +796,8 @@
             <li><a href="https://github.com/devwithzachary/LinuxOnAndroid/blob/main/LICENSE" target="_blank"
                 rel="noopener" data-umami-event="click-license-footer">GPL-2.0 License</a></li>
             <li><a href="#features" data-umami-event="click-features-footer">Features</a></li>
+            <li><a href="#showcase" data-umami-event="click-showcase-footer">Screenshots</a></li>
+            <li><a href="#distros" data-umami-event="click-distros-footer">Distributions</a></li>
             <li><a href="#stacks" data-umami-event="click-stacks-footer">Software Stacks</a></li>
           </ul>
         </div>
@@ -585,7 +818,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2011 – 2026 Linux on Android Project. Released under GPL-2.0.</div>
+        <div>© 2011 - 2026 Linux on Android Project. Released under GPL-2.0.</div>
         <div>Hosted on GitHub Pages • linuxonandroid.com • <a href="privacy.html"
             style="color: #a1a1aa; text-decoration: underline;" data-umami-event="click-privacy-footer">Privacy
             Policy</a></div>
