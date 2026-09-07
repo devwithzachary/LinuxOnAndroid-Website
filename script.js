@@ -14,7 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Interactive Software Stack Tabs
+  
+  // Close mobile nav when clicking outside
+  document.addEventListener('click', (e) => {
+    if (navLinks && navLinks.classList.contains('show')) {
+      if (!navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navLinks.classList.remove('show');
+      }
+    }
+  }); // click-outside
+
+// Interactive Software Stack Tabs
   const tabBtns = document.querySelectorAll('.tab-btn');
   const stackPanels = document.querySelectorAll('.stack-panel');
 
@@ -46,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
-        const headerOffset = 80;
+        const headerOffset = window.innerWidth <= 768 ? 68 : 80;
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
