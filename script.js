@@ -100,9 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Built-in hardware-accelerated VT100/XTerm terminal emulator supporting multiple simultaneous POSIX PTY shell sessions. Switch between active containers and running processes with a single tap.',
       highlights: [
         'Independent concurrent tabs for running background daemons and foreground shells',
-        'Extended hardware keys toolbar (ESC, TAB, CTRL, ALT, cursor navigation)',
-        'Full 256-color ANSI support for rich CLI utilities like top, htop, and neovim',
-        'Configurable font sizing, gestures, and smooth scrollback history'
+        'Termux-style 7-column pinned hotkeys grid (ESC, TAB, CTRL, ALT, cursor navigation)',
+        'Custom hotkey editor and session termination confirmation safety prompt',
+        'Full 256-color ANSI support for rich CLI utilities like top, htop, and neovim'
       ]
     },
     {
@@ -128,20 +128,20 @@ document.addEventListener('DOMContentLoaded', () => {
       desc: 'Transform your mobile device into a graphical workstation or coding hub. Install pre-configured development stacks and full desktop environments with a single tap.',
       highlights: [
         'Full XFCE4 Graphical Desktop GUI with TigerVNC and browser-based noVNC',
+        'Rootless Docker tools (udocker) and Visual Studio Code Server (code-server)',
         'Python 3 data stack, Node.js runtime, and Android SDK platform tools',
-        'Lightweight NGINX web server and embedded SQLite database environments',
-        'Automated dependency resolution and zero-friction package installation'
+        'Lightweight NGINX web server, embedded SQLite, and OpenSSH remote daemon'
       ]
     },
     {
       id: 'distros',
       badge: 'DISTRO CATALOG',
-      title: '6 Official Linux Distributions',
+      title: '7 Official Linux Distributions',
       image: 'assets/5_distro_wizard.png',
       alt: 'Linux on Android Distro Setup Wizard',
-      desc: 'Choose from 6 officially supported Linux distributions. The setup wizard automatically detects your CPU architecture, verifies SHA256 checksums, and configures mirrors for maximum download speeds.',
+      desc: 'Choose from 7 officially supported Linux distributions. The setup wizard automatically detects your CPU architecture, verifies SHA256 checksums, and configures mirrors for maximum download speeds.',
       highlights: [
-        'Official distributions: Ubuntu, Debian, Alpine, Arch, Kali, and Void Linux',
+        'Official distributions: Ubuntu, Debian, Fedora, Alpine, Arch, Kali, and Void Linux',
         'Automatic CPU architecture detection (ARM64, x86_64, ARMv7)',
         'Geographic fast mirror resolution and verified rootfs tarball integrity',
         'Customize container names, rootfs paths, and user credentials effortlessly'

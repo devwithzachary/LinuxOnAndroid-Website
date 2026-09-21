@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Linux on Android | Complete Linux Installer & PRoot Engine</title>
   <meta name="description"
-    content="Run full Linux desktop and CLI environments natively on Android without root. Complete Linux Installer brings 6 official Linux distributions (Ubuntu, Debian, Alpine, Arch, Kali, Void), concurrent multi-tab terminal emulation, XFCE desktop GUI, and one-click developer stacks directly to your phone or tablet.">
+    content="Run full Linux desktop and CLI environments natively on Android without root. Complete Linux Installer brings 7 official Linux distributions (Ubuntu, Debian, Alpine, Arch, Kali, Void), concurrent multi-tab terminal emulation, XFCE desktop GUI, and one-click developer stacks directly to your phone or tablet.">
   <meta name="keywords"
     content="Linux on Android, Complete Linux Installer, PRoot Android, Ubuntu on Android, Debian Android, Alpine Linux, Arch Linux, Kali Linux, Void Linux, Rootless Linux, Android Linux terminal, XFCE Android, CLI developer tools">
   <link rel="canonical" href="https://linuxonandroid.com/">
@@ -14,7 +14,7 @@
   <!-- OpenGraph & Social Meta -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Linux on Android | Complete Linux Installer & PRoot Engine">
-  <meta property="og:description" content="Run full Linux desktop and CLI environments natively on Android without root. Complete Linux Installer brings 6 official Linux distributions, concurrent multi-tab terminal, and 1-click desktop stacks.">
+  <meta property="og:description" content="Run full Linux desktop and CLI environments natively on Android without root. Complete Linux Installer brings 7 official Linux distributions, concurrent multi-tab terminal, and 1-click desktop stacks.">
   <meta property="og:url" content="https://linuxonandroid.com/">
   <meta property="og:image" content="https://linuxonandroid.com/assets/1_dashboard.png">
 
@@ -60,6 +60,13 @@
         <a href="#stacks" data-umami-event="click-nav-stacks">Software Stacks</a>
         <a href="#history" data-umami-event="click-nav-history">Heritage</a>
         <a href="#setup" data-umami-event="click-nav-setup">Get Started</a>
+        <a href="https://discord.gg/vJbBagx8JA" target="_blank" rel="noopener" class="nav-btn"
+          data-umami-event="click-nav-discord">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.894.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+          </svg>
+          Discord
+        </a>
         <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener" class="nav-btn"
           data-umami-event="click-nav-github">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -79,13 +86,13 @@
         <div class="hero-content">
           <div class="badge">
             <span class="badge-dot"></span>
-            v1.5.0 Released • 6 Distros • 100% Rootless PRoot Subsystem
+            v1.7.1 Available • 7 Distros • 100% Rootless PRoot Subsystem
           </div>
           <h1 class="hero-title">
             Run Full <span class="gradient-text">Linux Desktops & Multi-Distro CLI</span> on Android
           </h1>
           <p class="hero-description">
-            Complete Linux Installer brings 6 official Linux distributions (Ubuntu, Debian, Alpine, Arch, Kali, Void),
+            Complete Linux Installer brings 7 official Linux distributions (Ubuntu, Debian, Fedora, Alpine, Arch, Kali, Void),
             concurrent multi-tab terminal emulation, XFCE desktop GUI, and one-click developer stacks directly to your
             Android device - 100% rootless!
           </p>
@@ -134,8 +141,8 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-num">6</div>
-          <div class="stat-label">Linux Distros (Ubuntu, Alpine, Arch, ...)</div>
+          <div class="stat-num">7</div>
+          <div class="stat-label">Linux Distros (Ubuntu, Fedora, Arch, ...)</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">Multi-Tab</div>
@@ -307,14 +314,14 @@
 
         <div class="feature-card">
           <div class="feature-icon">🐧</div>
-          <h3 class="feature-title">6 Official Linux Distros</h3>
-          <p class="feature-text">First-class support for Ubuntu 24.04, Debian 12, Alpine Linux 3.20, Arch Linux, Kali Linux, and Void Linux with automatic mirror detection and rootfs SHA256 integrity verification.</p>
+          <h3 class="feature-title">7 Official Linux Distros</h3>
+          <p class="feature-text">First-class support for Ubuntu, Debian 12, Fedora 44, Alpine Linux 3.21, Arch Linux, Kali Linux, and Void Linux with automatic mirror detection and rootfs SHA256 integrity verification.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
           <h3 class="feature-title">Concurrent Multi-Tab Terminal</h3>
-          <p class="feature-text">Built-in VT100/XTerm terminal emulator supporting multiple simultaneous POSIX PTY shell sessions, live process switching, ANSI colors, and a custom hardware toolbar (Ctrl, Alt, Esc, Tab, Arrows).</p>
+          <p class="feature-text">Built-in VT100/XTerm terminal emulator supporting multiple simultaneous POSIX PTY shell sessions, Termux-style 7-column pinned hotkey grid, custom hotkey editor, and session stop protection.</p>
         </div>
 
         <div class="feature-card">
@@ -382,6 +389,23 @@
           </div>
         </div>
 
+        <!-- Fedora -->
+        <div class="distro-card">
+          <div class="distro-header">
+            <div class="distro-icon-wrapper" style="background: rgba(81, 162, 218, 0.15); color: #51A2DA;">
+              <span class="distro-symbol">F</span>
+            </div>
+            <div>
+              <h3 class="distro-name">Fedora 44</h3>
+              <span class="distro-tag">RPM • DNF Package Manager</span>
+            </div>
+          </div>
+          <p class="distro-desc">Modern Red Hat-family distribution delivering the latest upstream innovations, GCC toolchains, and system libraries via the high-performance DNF package manager.</p>
+          <div class="distro-footer">
+            <span class="distro-meta">Ideal for Red Hat Developers & Modern Stacks</span>
+          </div>
+        </div>
+
         <!-- Alpine -->
         <div class="distro-card">
           <div class="distro-header">
@@ -389,7 +413,7 @@
               <span class="distro-symbol">A</span>
             </div>
             <div>
-              <h3 class="distro-name">Alpine Linux 3.20</h3>
+              <h3 class="distro-name">Alpine Linux 3.21</h3>
               <span class="distro-tag">musl libc • APK</span>
             </div>
           </div>
@@ -464,6 +488,9 @@
 
       <div class="tab-nav">
         <button class="tab-btn active" data-stack="xfce" data-umami-event="click-stack-tab-xfce">XFCE4 Desktop</button>
+        <button class="tab-btn" data-stack="docker" data-umami-event="click-stack-tab-docker">Docker & udocker</button>
+        <button class="tab-btn" data-stack="vscode" data-umami-event="click-stack-tab-vscode">VS Code Server</button>
+        <button class="tab-btn" data-stack="ttyd" data-umami-event="click-stack-tab-ttyd">Web Terminal</button>
         <button class="tab-btn" data-stack="node" data-umami-event="click-stack-tab-node">Node.js Stack</button>
         <button class="tab-btn" data-stack="python" data-umami-event="click-stack-tab-python">Python 3 Stack</button>
         <button class="tab-btn" data-stack="android" data-umami-event="click-stack-tab-android">Android Dev Tools</button>
@@ -503,6 +530,105 @@
               <p class="output">WebSocket server settings:</p>
               <p class="output">  - Listen on :6080</p>
               <p class="output">  - Web server active at /usr/share/novnc</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Docker & udocker Panel -->
+        <div class="stack-panel" id="stack-docker">
+          <div class="stack-info">
+            <h3>Rootless Docker Tools (udocker)</h3>
+            <p>Pull and run standard container images from Docker Hub directly in user space without root access, unlocked bootloaders, or Linux kernel cgroups. Includes native CLI delegation for both docker and docker-compose commands.</p>
+            <div class="tag-list">
+              <span class="tag-item">udocker</span>
+              <span class="tag-item">docker-cli</span>
+              <span class="tag-item">docker-compose</span>
+              <span class="tag-item">rootless-engine</span>
+            </div>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary"
+              data-umami-event="click-stack-github-docker">View Installation Logic →</a>
+          </div>
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">bash: linuxonandroid</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">docker pull alpine:latest</span></p>
+              <p class="output">latest: Pulling from library/alpine</p>
+              <p class="output">Digest: sha256:beef... Status: Downloaded newer image</p>
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">docker run -it alpine sh</span></p>
+              <p class="output">/ # echo "Hello from Docker in user-space!"</p>
+              <p class="output">Hello from Docker in user-space!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VS Code Server Panel -->
+        <div class="stack-panel" id="stack-vscode">
+          <div class="stack-info">
+            <h3>Visual Studio Code Server (code-server)</h3>
+            <p>Run a full Visual Studio Code IDE inside your container, accessible from any browser on your tablet, phone, or local Wi-Fi. Includes the full VS Code extension marketplace, syntax highlighting, Git integration, and integrated terminal.</p>
+            <div class="tag-list">
+              <span class="tag-item">code-server</span>
+              <span class="tag-item">extensions</span>
+              <span class="tag-item">port 8443</span>
+              <span class="tag-item">browser-ide</span>
+            </div>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary"
+              data-umami-event="click-stack-github-vscode">View Installation Logic →</a>
+          </div>
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">bash: linuxonandroid</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">code-server --bind-addr 0.0.0.0:8443 --auth none</span></p>
+              <p class="output">[INFO] HTTP server listening on http://0.0.0.0:8443</p>
+              <p class="output">[INFO] VS Code Server active</p>
+              <p><span class="prompt">browser:~$</span> <span class="cmd">open http://192.168.1.50:8443</span></p>
+              <p class="output">Connected to Remote VS Code IDE [OK]</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Browser Web Terminal Panel -->
+        <div class="stack-panel" id="stack-ttyd">
+          <div class="stack-info">
+            <h3>Browser Web Terminal (ttyd)</h3>
+            <p>Share your interactive Linux shell to any web browser on your local network with a single tap. Ideal for quick remote debugging, coding from a desktop browser, or presenting CLI demos without requiring SSH keys or clients.</p>
+            <div class="tag-list">
+              <span class="tag-item">ttyd</span>
+              <span class="tag-item">port 8080</span>
+              <span class="tag-item">websocket-pty</span>
+              <span class="tag-item">zero-config</span>
+            </div>
+            <a href="https://github.com/devwithzachary/LinuxOnAndroid" class="btn-secondary"
+              data-umami-event="click-stack-github-ttyd">View Installation Logic →</a>
+          </div>
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">bash: linuxonandroid</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">ubuntu@android:~$</span> <span class="cmd">ttyd -p 8080 -W bash</span></p>
+              <p class="output">[INFO] Listening on port: 8080</p>
+              <p><span class="prompt">browser:~$</span> <span class="cmd">open http://192.168.1.50:8080</span></p>
+              <p class="output">Interactive Web Terminal Session Established [OK]</p>
             </div>
           </div>
         </div>
@@ -718,9 +844,9 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
-            <div class="timeline-date">2026 Modern Architecture (v1.5.0)</div>
+            <div class="timeline-date">2026 Modern Architecture (v1.7.1)</div>
             <h3 class="timeline-title">100% Rootless Multi-Distro Rebirth</h3>
-            <p class="timeline-desc">Rebuilt from the ground up: complete rootless operation via PRoot ptrace, 6 official Linux distributions, concurrent multi-tab POSIX PTY terminal, Jetpack Compose Material3 UI, and arch-aware mirror automation.</p>
+            <p class="timeline-desc">Rebuilt from the ground up: complete rootless operation via PRoot ptrace, 7 official Linux distributions, concurrent multi-tab POSIX PTY terminal, Jetpack Compose Material3 UI, and arch-aware mirror automation.</p>
             <div class="archive-links">
               <a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener"
                 class="archive-link" data-umami-event="click-history-github-modern">
@@ -759,7 +885,7 @@
         <div class="step-card">
           <span class="step-num">02</span>
           <h3 class="step-title">Choose Distro & Architecture</h3>
-          <p class="step-text">Select from Ubuntu, Debian, Alpine, Arch, Kali, or Void. The wizard automatically detects your architecture (ARM64, x86_64, ARMv7) and downloads verified rootfs tarballs.</p>
+          <p class="step-text">Select from Ubuntu, Debian, Fedora, Alpine, Arch, Kali, or Void. The wizard automatically detects your architecture (ARM64, x86_64, ARMv7) and downloads verified rootfs tarballs.</p>
         </div>
 
         <div class="step-card">
@@ -791,6 +917,8 @@
                 target="_blank" rel="noopener" data-umami-event="click-playstore-footer">Google Play Store</a></li>
             <li><a href="https://play.google.com/apps/testing/com.devwithzachary.completelinuxinstaller" target="_blank"
                 rel="noopener" data-umami-event="click-openbeta-footer">Google Play Open Beta</a></li>
+            <li><a href="https://discord.gg/vJbBagx8JA" target="_blank" rel="noopener"
+                data-umami-event="click-discord-footer">Discord Community</a></li>
             <li><a href="https://github.com/devwithzachary/LinuxOnAndroid" target="_blank" rel="noopener"
                 data-umami-event="click-github-footer">GitHub Repository</a></li>
             <li><a href="https://github.com/devwithzachary/LinuxOnAndroid/blob/main/LICENSE" target="_blank"
