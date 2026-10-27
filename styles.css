@@ -317,6 +317,28 @@ img {
   color: var(--text-primary);
 }
 
+.btn-playstore {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+}
+
+.btn-playstore:hover {
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
+  color: #ffffff;
+}
+
+.btn-fdroid {
+  background: linear-gradient(135deg, #1976d2 0%, #0d47a1 100%);
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(25, 118, 210, 0.4);
+}
+
+.btn-fdroid:hover {
+  box-shadow: 0 0 40px rgba(25, 118, 210, 0.6);
+  color: #ffffff;
+}
+
 /* Phone Frame Mockup */
 .hero-mockup-wrapper {
   position: relative;
