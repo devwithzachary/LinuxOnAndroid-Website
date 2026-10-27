@@ -126,6 +126,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: clamp(16px, 2.5vw, 36px);
   height: 80px;
   position: relative;
 }
@@ -139,6 +140,7 @@ img {
   letter-spacing: -0.02em;
   color: var(--text-primary);
   flex-shrink: 0;
+  margin-right: clamp(16px, 2.5vw, 40px);
 }
 
 .brand-logo {
@@ -155,7 +157,7 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: clamp(12px, 1.4vw, 24px);
 }
 
 .nav-links a {
@@ -163,6 +165,7 @@ img {
   font-weight: 600;
   font-size: 0.95rem;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -175,11 +178,12 @@ img {
   gap: 8px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-color);
-  padding: 8px 18px;
+  padding: 7px 16px;
   border-radius: var(--radius-full);
   color: var(--text-primary) !important;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  white-space: nowrap;
 }
 
 .nav-btn:hover {
@@ -224,25 +228,73 @@ img {
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
+  gap: 10px;
+  padding: 4px 14px 4px 6px;
   border-radius: var(--radius-full);
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.25);
-  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  color: #c7d2fe;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 24px;
   max-width: 100%;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.badge:hover {
+  background: rgba(99, 102, 241, 0.16);
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.25);
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(99, 102, 241, 0.25);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
 }
 
 .badge-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--accent-emerald);
-  box-shadow: 0 0 10px var(--accent-emerald);
+  box-shadow: 0 0 8px var(--accent-emerald);
   flex-shrink: 0;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+.badge-text {
+  font-weight: 500;
+  color: #e2e8f0;
+  white-space: nowrap;
+}
+
+.badge-arrow {
+  color: #818cf8;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.badge:hover .badge-arrow {
+  transform: translateX(3px);
+  color: #a5b4fc;
 }
 
 .hero-title {
@@ -1317,26 +1369,23 @@ footer {
   }
 }
 
-/* Mobile Devices (max-width: 768px) */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 16px;
-  }
-
-  /* Header & Navigation Fixes */
+/* Navigation Collapse on Tablets & Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
   .navbar .container {
     height: 68px;
-    padding: 0 16px;
+    padding: 0 20px;
+    gap: 16px;
   }
 
   .brand {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     gap: 10px;
+    margin-right: 0;
   }
 
   .brand-logo {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
   }
 
   .mobile-toggle {
@@ -1383,6 +1432,27 @@ footer {
     border-radius: var(--radius-sm);
     border-bottom: none;
   }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .navbar .container {
+    padding: 0 16px;
+  }
+
+  .brand {
+    font-size: 1.1rem;
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: 32px;
+    height: 32px;
+  }
 
   /* Hero Adjustments */
   .hero {
@@ -1402,10 +1472,15 @@ footer {
   }
 
   .badge {
-    font-size: 0.76rem;
-    padding: 6px 12px;
-    text-align: center;
-    white-space: normal;
+    font-size: 0.78rem;
+    padding: 4px 12px 4px 5px;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .badge-tag {
+    font-size: 0.72rem;
+    padding: 2px 8px;
   }
 
   .hero-ctas {
